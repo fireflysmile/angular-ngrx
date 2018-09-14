@@ -6,8 +6,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { UsersModule } from './views/users/users.module';
 import { StoresModule } from './shared/stores';
+import { UsersModule } from './modules/users/users.module';
 
 
 @NgModule({

@@ -1,14 +1,25 @@
 import { Injectable } from '@angular/core';
 import { Observable, of as observableOf, throwError } from 'rxjs';
 import { User } from '../models/user';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 export const MOCK_USER = new User();
-MOCK_USER.userName = "12345";
-MOCK_USER.password = "12345";
 
 @Injectable()
 export class UserService {
-  // constructor() {}
+
+  public userData: Array<User>;
+
+  constructor(private http: HttpClient) {
+    this.getData('assets/data/user.json').subscribe(data => {
+      this.userData = data
+    })
+  }
+
+  getData(url): Observable<any>{
+    return this.http.get(url).pipe(map(res => res))
+  }
 
   /**
    * Authenticate the user
@@ -21,9 +32,14 @@ export class UserService {
     // Normally you would do an HTTP request to determine to
     // attempt authenticating the user using the supplied credentials.
 
-    if (user === MOCK_USER.userName && password === MOCK_USER.password) {
-      // this._authenticated = true;
-      return observableOf(MOCK_USER);
+    for (let i=0; i < this.userData.length; i++){
+      if (user === this.userData[i].userName && password === this.userData[i].password) {
+
+        MOCK_USER.userName = this.userData[i].userName;
+        MOCK_USER.password = this.userData[i].password;
+
+        return observableOf(MOCK_USER);
+      }
     }
 
     return throwError(new Error("Invalid email or password"));
