@@ -1,24 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Observable, of as observableOf, throwError } from 'rxjs';
-import { User } from '../models/user';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { User } from '../../shared/models/user';
+import { DataService } from '../../shared/services/data.service';
 
 export const MOCK_USER = new User();
 
 @Injectable()
-export class UserService {
+export class UsersService {
 
   public userData: Array<User>;
 
-  constructor(private http: HttpClient) {
-    this.getData('assets/data/user.json').subscribe(data => {
+  constructor(
+    private dataService: DataService
+  ) {
+    dataService.getData('assets/data/user.json').subscribe(data => {
       this.userData = data
     })
-  }
-
-  getData(url): Observable<any>{
-    return this.http.get(url).pipe(map(res => res))
   }
 
   /**

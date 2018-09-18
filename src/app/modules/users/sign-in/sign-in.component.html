@@ -2,7 +2,7 @@
   
 <div class="sign-in flex-row align-items-center">
   <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-8" appDemo [config]="{querySelector:'h2'}">
       <div class="card-group">
         <div class="card p-4">
           <div class="card-body">
@@ -16,7 +16,6 @@
               </div>
               <input type="text" class="form-control" placeholder="Username" [(ngModel)]="userName" #name="ngModel" required minlength="8" pattern="[^ @]*@[^ @]*" maxlength="20" />
             </div>
-            
             <div class="input-group">
               <div [hidden]="name.valid || name.pristine"
                     class="alert alert-danger">
@@ -44,7 +43,6 @@
                 <button type="button" class="btn btn-link px-0" (click)="newFC()">Forgot password?</button>
               </div>
             </div>
-            
             </div>
             </div>
             <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">

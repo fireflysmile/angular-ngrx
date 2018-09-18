@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { Store, select, State } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { UserStoreState, UserStoreSelector, UserStoreActions } from '../../../shared/stores/user-store';
+import { Go } from '../../../shared/stores/router-store/actions';
+import { ofType } from '@ngrx/effects';
+import { getUsersState } from '../../../shared/stores/user-store/selectors';
 
 
 @Component({
@@ -18,6 +21,8 @@ export class SignInComponent implements OnInit {
    */
   loading$: Observable<boolean>;
 
+
+
   public userName: string = '';
   public password: string = ''
 
@@ -27,10 +32,21 @@ export class SignInComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  public ngOnInit() {
 
-    this.store$.select('user').subscribe(OBS => {
+    this.store$.select(getUsersState).subscribe(OBS => {
       console.log(OBS)
+    })
+
+    this.store$.select(UserStoreSelector.isGetRole).subscribe(value => {
+
+      console.log(value)
+      if (value === 1){
+        alert("ok")
+        this.store$.dispatch(new Go({
+          path: ["/application/home"]
+        }));
+      }
     })
 
     this.loading$ = this.store$.select(UserStoreSelector.isAuthenticationLoading);

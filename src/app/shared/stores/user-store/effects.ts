@@ -6,12 +6,12 @@ import { Action } from "@ngrx/store";
 import { debounceTime, switchMap, map, catchError } from 'rxjs/operators';
 
 import * as UserActions from './actions';
-import { UserService } from "../../services/user.service";
+import { UsersService } from "../../../modules/users/users.service";
 
 
 @Injectable()
 export class UserEffects {
-    constructor(private actions$: Actions, private userService: UserService) {}
+    constructor(private actions$: Actions, private userService: UsersService) {}
 
     @Effect()
     authenticate$: Observable<Action> = this.actions$.pipe(

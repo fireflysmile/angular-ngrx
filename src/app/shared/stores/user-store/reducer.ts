@@ -17,11 +17,34 @@ export function UserReducer (state: State = initialState, action: Actions): Stat
 
         case ActionTypes.AUTHENTICATE_SUCCESS:
             const user: User = action.payload.user;
-            return  {
-                ...state,
-                error: null,
-                loading: false,
-                user: user
+
+            // verify user is not null
+            if (user === null) {
+                return {
+                    ...state,
+                    error: null,
+                    loading: false,
+                }
+            }
+            
+            // is user member
+            if (user.userName  === "user@u.com") {
+                return  {
+                    ...state,
+                    error: null,
+                    loading: false,
+                    role: 1,
+                    user: user
+                }
+            } else if (user.userName  === "admin@a.com") {
+                return  {
+                    ...state,
+                    error: null,
+                    loading: false,
+                    role: 2,
+                    user: user
+                }
+
             }
 
         case ActionTypes.AUTHENTICATE_FAILURE:

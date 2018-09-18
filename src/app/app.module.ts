@@ -6,9 +6,6 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { StoresModule } from './shared/stores';
-import { UsersModule } from './modules/users/users.module';
-
 
 @NgModule({
   declarations: [
@@ -17,10 +14,8 @@ import { UsersModule } from './modules/users/users.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    UsersModule,
-    StoresModule
-  ],  
+    HttpClientModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
