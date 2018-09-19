@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
-import { UsersRoutingModule } from './users-routing.module';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SharedModule } from '../../shared/shared.module';
 
+const routes: Routes = [
+  {
+    path: 'sign-in', component: SignInComponent
+  }
+];
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    UsersRoutingModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(routes),
     SharedModule
   ],
   declarations: [SignInComponent]

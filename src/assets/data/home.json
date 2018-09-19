@@ -1,44 +1,165 @@
-[
-    {
-        "id": 1,
-        "images":"https://via.placeholder.com/350x150",
-        "title":"Card title",
-        "description":"Some quick example text to build on the card title and make up the bulk of the card's content."
-    }
-    ,{
-        "id": 2,
-        "images":"https://via.placeholder.com/350x150",
-        "title":"Card title",
-        "description":"Some quick example text to build on the card title and make up the bulk of the card's content."
-    }
-    ,{
-        "id": 3,
-        "images":"https://via.placeholder.com/350x150",
-        "title":"Card title",
-        "description":"Some quick example text to build on the card title and make up the bulk of the card's content."
-    }
-    ,{
-        "id": 4,
-        "images":"https://via.placeholder.com/350x150",
-        "title":"Card title",
-        "description":"Some quick example text to build on the card title and make up the bulk of the card's content."
-    }
-    ,{
-        "id": 5,
-        "images":"https://via.placeholder.com/350x150",
-        "title":"Card title",
-        "description":"Some quick example text to build on the card title and make up the bulk of the card's content."
-    }
-    ,{
-        "id": 6,
-        "images":"https://via.placeholder.com/350x150",
-        "title":"Card title",
-        "description":"Some quick example text to build on the card title and make up the bulk of the card's content."
-    }
-    ,{
-        "id": 7,
-        "images":"https://via.placeholder.com/350x150",
-        "title":"Card title",
-        "description":"Some quick example text to build on the card title and make up the bulk of the card's content."
-    }
-]
+{
+    "List Duration": [
+        {
+            "value": "1 Week",
+            "label": "1 Week"
+        }
+        ,{
+            "value": "2 Week",
+            "label": "2 Week"
+        }
+        ,{
+            "value": "2 Week",
+            "label": "2 Week"
+        }
+        ,{
+            "value": "2 Week",
+            "label": "2 Week"
+        }
+        ,{
+            "value": "2 Week",
+            "label": "2 Week"
+        }
+        ,{
+            "value": "2 Week",
+            "label": "2 Week"
+        }
+    ],
+    "chart pie":[
+        {"value": 25, "label": "value 1", "color": "#F5A623"},
+        {"value": 50, "label": "value 2", "color": "#7ED321"},
+        {"value": 60, "label": "value 3", "color": "#006BD5"}
+    ],
+    "Total Conflicts":1003,
+    "Records Auto-Processed":888,
+    "Manual Intervention Needed":23,
+    "Auto-Rate":88.6,
+    "List Progress":[
+        {
+            "id":1,
+            "selected": false,
+            "Well": "Ailurian",
+            "Stage No": 2310,
+            "API": "lipsum",
+            "Records Affected": 18,
+            "Duplicates": 8,
+            "Status":"Not Processed",
+            "Rows processed":189,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_1"
+        }
+        ,{
+            "id":2,
+            "selected": false,
+            "Well": "Gehringer",
+            "Stage No": 123,
+            "API": "dolorsit",
+            "Records Affected": 12,
+            "Duplicates": 4,
+            "Status":"Completed",
+            "Rows processed":456,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_2"
+        }
+        ,{
+            "id":3,
+            "selected": false,
+            "Well": "Lohringer",
+            "Stage No": 4,
+            "API": "amet",
+            "Records Affected": 4,
+            "Duplicates": 12,
+            "Status":"Completed",
+            "Rows processed":789,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_3"
+        }
+        ,{
+            "id":4,
+            "selected": false,
+            "Well": "Lohringer",
+            "Stage No": 4,
+            "API": "amet",
+            "Records Affected": 213,
+            "Duplicates": 4,
+            "Status":"Not Processed",
+            "Rows processed":345,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_4"
+        }
+        ,{
+            "id":5,
+            "selected": false,
+            "Well": "Ailurian",
+            "Stage No": 2310,
+            "API": "lipsum",
+            "Records Affected": 18,
+            "Duplicates": 8,
+            "Status":"Needs Manual Review",
+            "Rows processed":345,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_1"
+        }
+        ,{
+            "id":6,
+            "selected": false,
+            "Well": "Gehringer",
+            "Stage No": 123,
+            "API": "dolorsit",
+            "Records Affected": 12,
+            "Duplicates": 4,
+            "Status":"Completed",
+            "Rows processed":567,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_1"
+        }
+        ,{
+            "id":7,
+            "selected": false,
+            "Well": "Lohringer",
+            "Stage No": 4,
+            "API": "amet",
+            "Records Affected": 4,
+            "Duplicates": 12,
+            "Status":"Completed",
+            "Rows processed":189,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_1"
+        }
+        ,{
+            "id":8,
+            "selected": false,
+            "Well": "Lohringer",
+            "Stage No": 4,
+            "API": "amet",
+            "Records Affected": 213,
+            "Duplicates": 4,
+            "Status":"Not Processed",
+            "Rows processed":189,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_1"
+        }
+        ,{
+            "id":9,
+            "selected": false,
+            "Well": "Ailurian",
+            "Stage No": 2310,
+            "API": "lipsum",
+            "Records Affected": 18,
+            "Duplicates": 8,
+            "Status":"Needs Manual Review",
+            "Rows processed":189,
+            "original":17,
+            "final":12,
+            "Master Data":"clean_rate_dup_1"
+        }
+    ]
+}

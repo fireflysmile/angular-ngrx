@@ -1,0 +1,93 @@
+@import '~src/assets/sass/colors';
+@import '~src/assets/sass/fonts';
+
+.qz-navbar {
+    margin-bottom: 0;
+    background-color: $color-bg-header;
+    border-radius: 0;
+    letter-spacing: 1.5px;
+    .navbar-brand {
+        color: #fff;
+        padding: 28px 84px 0 0;
+        height: 77px;
+        font-family: ProximaNova-Light;
+        font-size: 17px;
+        line-height: 20px;
+        span{
+            border: 1px solid #EFF3F6;
+            display: inline-block;
+            height: 29px;
+            width: 29px;
+            line-height: 29px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 2px;
+            margin-top: -3px;
+            box-shadow: 0.5px 0.5px;
+            margin-right: 7px;
+        }
+
+    }
+    .navbar-nav {
+        li {
+            a {
+                color: #fff;
+                padding: 0 44px;
+                height: 77px;
+                line-height: 77px;
+                font-family: ProximaNova-Semibold;
+                font-size: 15px;
+                letter-spacing: 0.3px;
+                &.active {
+                    background-color: #006BD5;
+                }
+            }
+        }
+    }
+    .navbar-right {
+        li {
+            a {
+                color: #85C2FF;
+                padding: 0 15px;
+                .avatar{
+                    width: 25px;
+                    margin: -5px 11px -5px 0;
+                }
+            }
+            &:last-child{
+                a{
+                    padding-right: 2px;
+                }
+            }
+            .qz-dropdown-icon {
+                padding: 0 15px;
+                margin-top: -3px;
+                .caret-user{
+                    background: url("../../../../assets/img/Arrow.svg") no-repeat center;
+                    display: inline-block;
+                    width: 9px;
+                    height: 7px;
+                    background-size: 100%;
+                }
+            }
+            .icon-setting{
+                background: url("../../../../assets/img/ic_Settings.svg") no-repeat center;
+                display: inline-block;
+                width: 20px;
+                height: 23px;
+                margin-right: 7px;
+                margin-top: -2px;
+            }
+            .icon-logout{
+                background: url("../../../../assets/img/logout.svg") no-repeat center;
+                display: inline-block;
+                width: 29px;
+                height: 29px;
+                margin-right: 5px;
+                margin-top: -2px;
+            }
+        }
+    }
+    
+
+}

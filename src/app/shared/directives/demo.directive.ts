@@ -28,6 +28,7 @@ export class DemoDirective {
     if(this.ishovering === true){
       let part = this.el.nativeElement.querySelector(this.config.querySelector);
       this.renderer.setElementStyle(part, 'backgroundColor', 'red');
+
     } else {
       let part = this.el.nativeElement.querySelector(this.config.querySelector);
       this.renderer.setElementStyle(part, 'backgroundColor', '#007bff');
